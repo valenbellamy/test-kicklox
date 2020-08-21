@@ -2,17 +2,10 @@ import { useReducer, useCallback } from "react";
 import messagesData from "../data/data";
 
 function reducer(state, action) {
-  //console.log("MESSAGES REDUCER", action.type, action.payload);
   switch (action.type) {
-    case "FETCHING_MESSAGES":
-      return {
-        ...state,
-        loading: true,
-      };
     case "SET_MESSAGES":
       return {
         ...state,
-        loading: false,
         messages: action.payload,
       };
     case "ADD_MESSAGE":
@@ -25,22 +18,22 @@ function reducer(state, action) {
   }
 }
 
-export default function useMessages() {
+const useMessages = () => {
   const [state, dispatch] = useReducer(reducer, {
     messages: null,
-    loading: false,
   });
 
   const fetchMessages = useCallback(() => {
-    if (state.loading || state.messages !== null) {
+    if (state.messages !== null) {
+      // on évite de recharcher les messages
       return;
     }
-    dispatch({ type: "FETCHING_MESSAGES" });
-    const messages = messagesData;
+    const messages = messagesData; // avec une API on aurait fait l'appel pour charger les messages à cet endroit
     dispatch({ type: "SET_MESSAGES", payload: messages });
   }, [state]);
 
   const createMessage = useCallback((message) => {
+    // avec une API on aurait fait l'appel pour ajouter le message à cet endroit
     dispatch({ type: "ADD_MESSAGE", payload: message });
   }, []);
 
@@ -49,4 +42,6 @@ export default function useMessages() {
     fetchMessages,
     createMessage,
   };
-}
+};
+
+export default useMessages;

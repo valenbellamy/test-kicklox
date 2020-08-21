@@ -1,3 +1,28 @@
+## Projet de test pour l'entretien technique
+
+Cloner le dossier puis:
+
+### `cd test-kicklox`
+
+### `npm install`
+
+### `npm start`
+
+Mon travail est composé de quatre dossiers:
+
+1. App comprenant les composants principaux
+2. data comprenant ma donnée initiale
+3. hooks comprenant mes hooks
+4. ui comprenant des composants génériques réutilisables
+
+J'ai choisi de travailler avec un reducer utilisé dans un hook personnalisé nommé useMessages qui me permet de venier chercher ma donnée initiale, ajouter un message. Mon hook est ensuite appelé dans le composant Site.
+
+Dans l'hypothèse que l'on ajoute d'autres fonctionnalités (suppression, édition des messages, etc ...) le hook pourrait être étoffé et facilement utilisé. Si j'avais eu une API, j'aurais pu dans mon hook personnalisé faire les appels qui vont bien.
+
+J'ai utilisé bootstrap afin d'avoir de pouvoir rapidement prototypé cette petite app et avoir une interface assez agréable.
+
+J'ai réalisé trois petits tests assez simples, l'idée étant de montrer que j'y fais attention mais j'ai beaucoup à apprendre à ce niveau-là...
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { createPortal } from "react-dom";
 
-function Modal({ onClose, title, children }) {
+const Modal = ({ onClose, title, children }) => {
   return createPortal(
     <>
       <div
@@ -34,7 +34,7 @@ function Modal({ onClose, title, children }) {
     </>,
     document.body
   );
-}
+};
 
 Modal.propTypes = {
   onClose: PropTypes.func.isRequired,

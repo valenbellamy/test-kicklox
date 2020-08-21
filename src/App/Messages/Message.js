@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import PropTypes from "prop-types";
 
-const Message = memo(function ({ message }) {
+const Message = memo(({ message }) => {
   return (
     <div className="card" data-testid="card">
       <div className="card-body">

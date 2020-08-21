@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Button from "./Button";
+import Button from "../../ui/Button";
 
 const Navbar = ({ onButtonClick }) => {
   return (
@@ -19,8 +19,6 @@ const Navbar = ({ onButtonClick }) => {
 
 Navbar.propTypes = {
   onButtonClick: PropTypes.func.isRequired,
-  // title: PropTypes.string.isRequired,
-  // children: PropTypes.node.isRequired,
 };
 
 export default Navbar;

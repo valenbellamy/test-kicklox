@@ -10,7 +10,7 @@ const MessageForm = ({ onSubmit, nbOfMessages, onClose }) => {
   const contentInput = useRef(null);
 
   useEffect(() => {
-    contentInput.current.focus();
+    contentInput.current.focus(); // Lorsque le composant est monté on focus le textarea pour pouvoir écrire directement
   }, []);
 
   const handleSubmit = (e) => {
@@ -24,12 +24,12 @@ const MessageForm = ({ onSubmit, nbOfMessages, onClose }) => {
       const newMessage = {
         content: values.content,
         visibility: values.visibility,
-        id: nbOfMessages + 1,
+        id: nbOfMessages + 1, // ajout d'un id
       };
       onSubmit(newMessage);
       setValues(defaultState);
       setErrors(defaultState);
-      onClose();
+      onClose(); // fermeture de la modal
     } else {
       return;
     }

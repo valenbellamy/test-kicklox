@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Navbar from "../ui/Navbar";
+import Navbar from "./Layout/Navbar";
 import Messages from "./Messages/Messages";
 import MessageForm from "./Messages/MessageForm";
 import Modal from "../ui/Modal";
@@ -20,6 +20,7 @@ const Site = () => {
       <Navbar onButtonClick={toggle} />
       <main className="py-5">
         <div className="container">
+          <h1 className="text-alpha mb-5">Liste des messages</h1>
           <Messages messages={messages} />
           {isVisible && (
             <Modal onClose={toggle} title="Ecrivez votre message">
