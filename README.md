@@ -23,6 +23,8 @@ J'ai utilisé bootstrap afin d'avoir de pouvoir rapidement prototypé cette peti
 
 J'ai réalisé trois petits tests assez simples, l'idée étant de montrer que j'y fais attention mais j'ai beaucoup à apprendre à ce niveau-là...
 
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
