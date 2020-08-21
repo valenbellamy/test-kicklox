@@ -17,7 +17,7 @@ Mon travail est composé de quatre dossiers:
 3. hooks comprenant mes hooks
 4. ui comprenant des composants génériques réutilisables
 
-J'ai choisi de travailler avec un _reducer utilisé dans un hook personnalisé_ nommé useMessages qui me permet de venir récupérer ma donnée initiale, ajouter un message. Mon hook est ensuite appelé dans le composant Site.
+J'ai choisi de travailler avec un **reducer utilisé dans un hook personnalisé** nommé useMessages qui me permet de venir récupérer ma donnée initiale, ajouter un message. Mon hook est ensuite appelé dans le composant Site.
 
 Dans l'hypothèse que l'on ajoute d'autres fonctionnalités (suppression, édition des messages, etc ...) le hook pourrait être étoffé et facilement utilisé. Si j'avais eu une API, j'aurais pu dans mon hook personnalisé faire les appels qui vont bien.
 
