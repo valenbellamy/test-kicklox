@@ -8,6 +8,8 @@ Cloner le dossier puis:
 
 ### `npm start`
 
+---
+
 Mon travail est composé de quatre dossiers:
 
 1. App comprenant les composants principaux
