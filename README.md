@@ -19,11 +19,11 @@ Mon travail est composé de quatre dossiers:
 
 J'ai choisi de travailler avec un **reducer utilisé dans un hook personnalisé** nommé useMessages qui me permet de venir récupérer ma donnée initiale, ajouter un message. Mon hook est ensuite appelé dans le composant Site.
 
-Dans l'hypothèse que l'on ajoute d'autres fonctionnalités (suppression, édition des messages, etc ...) le hook pourrait être étoffé et facilement utilisé. Si j'avais eu une API, j'aurais pu dans mon hook personnalisé faire les appels qui vont bien.
+Dans l'hypothèse que l'on ajoute d'autres fonctionnalités (suppression d'un message, filtrage des messages, etc ...) le hook pourrait être étoffé et facilement utilisé.
 
 J'ai utilisé bootstrap afin d'avoir de pouvoir rapidement prototypé cette petite app et avoir une interface assez agréable.
 
-J'ai réalisé trois petits tests assez simples, l'idée étant de montrer que j'y fais attention mais j'ai beaucoup à apprendre à ce niveau-là...
+J'ai réalisé trois petits tests assez simples, l'idée étant de montrer que j'y fais attention mais j'ai beaucoup à apprendre dans le domaine des tests
 
 <br />
 

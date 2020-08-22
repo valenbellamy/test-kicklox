@@ -3,11 +3,11 @@ import Navbar from "./Layout/Navbar";
 import Messages from "./Messages/Messages";
 import MessageForm from "./Messages/MessageForm";
 import Modal from "../ui/Modal";
-import useToggleModal from "../hooks/useToggleModal";
+import useToggle from "../hooks/useToggle";
 import useMessages from "../hooks/useMessages";
 
 const Site = () => {
-  const { isVisible, toggle } = useToggleModal(false);
+  const [modalVisible, toggleModal] = useToggle(false);
 
   const { messages, fetchMessages, createMessage } = useMessages();
 
@@ -17,17 +17,17 @@ const Site = () => {
 
   return (
     <>
-      <Navbar onButtonClick={toggle} />
+      <Navbar onButtonClick={toggleModal} />
       <main className="py-5">
         <div className="container">
           <h1 className="text-alpha mb-5">Liste des messages</h1>
           <Messages messages={messages} />
-          {isVisible && (
-            <Modal onClose={toggle} title="Ecrivez votre message">
+          {modalVisible && (
+            <Modal onClose={toggleModal} title="Ecrivez votre message">
               <MessageForm
                 onSubmit={createMessage}
                 nbOfMessages={messages.length}
-                onClose={toggle}
+                onClose={toggleModal}
               />
             </Modal>
           )}

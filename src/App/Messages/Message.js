@@ -1,6 +1,7 @@
 import React, { memo } from "react";
 import PropTypes from "prop-types";
 
+// notre composant affichant toujours le même rendu, on peut le mémoïser
 const Message = memo(({ message }) => {
   return (
     <div className="card" data-testid="card">

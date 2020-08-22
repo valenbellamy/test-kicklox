@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 
 const defaultState = { content: "", visibility: "" };
 
+// Si l'application était amené à avoir plusieurs formulaires, on pourrait créer un hook gérant le onChange, onSubmit, la validation et les erreurs afin de ne pas réecrire du code
 const MessageForm = ({ onSubmit, nbOfMessages, onClose }) => {
   const [values, setValues] = useState(defaultState);
   const [errors, setErrors] = useState(defaultState);
